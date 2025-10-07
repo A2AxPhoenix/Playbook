@@ -1,6 +1,15 @@
-build/
-cmake-build-*/
-*.o
-*.obj
-*.exe
+# Build Files
+/build/
+
+# cmake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.make
+Makefile
+
+# Swap Files
+*.swp
+*.swo
+
+# MacOS Finder
 *.DS_Store
