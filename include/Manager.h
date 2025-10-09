@@ -8,6 +8,8 @@
 
 class Manager {
 private:
+  uint64_t id;
+  static uint64_t nextID;
   std::string name;
   uint8_t placement;
   uint8_t wins;
@@ -25,6 +27,7 @@ public:
   Manager(std::string newName, uint8_t newPlacement, uint8_t newWins,
           uint8_t newTies, uint8_t newLosses);
 
+  uint64_t get_manager_id() const;
   std::string get_name() const;
   uint8_t get_placement() const;
   uint8_t get_wins() const;
@@ -35,6 +38,7 @@ public:
   int16_t get_differential() const;
   bool has_commissioner() const;
 
+  void set_manager_id(uint64_t newManID);
   void set_name(std::string newName);
   void set_placement(uint8_t newWins);
   void set_wins(uint8_t newWins);
