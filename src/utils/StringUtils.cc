@@ -12,7 +12,7 @@ std::string trim(const std::string &value) {
 
   // Find first occurence of a non-whitespace character (left to right)
   for (size_t i = 0; i < value.size(); i++) {
-    if (isspace(static_cast<unsigned char>(value.at(i)))) {
+    if (!isspace(static_cast<unsigned char>(value.at(i)))) {
       firstCharIndex = i;
       break;
     }
